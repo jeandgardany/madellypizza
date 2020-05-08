@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :flavors
+  resources :fillings
   devise_for :users
   resources :users
   get 'photo_uploads/new'

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flavor.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @flavor.description %>
+</p>
+
+<p>
+<% @flavor.iflavors.each do |photo| %>
+   <%= image_tag photo.small_thumb.url %>
+<% end %>
+</p>
+
+<%= link_to 'voltar', flavors_path %>

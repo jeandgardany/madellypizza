@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p class="text-center" style="font-size: large"><b>Sabores das Pizzas</b></p>
+ <div class="row">
+      <% @flavors.each do |flavor| %>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <p class="text-center" style="font-size: small"><b><%= flavor.name %></b></p>
+             <% flavor.iflavors.each do |photo| %>
+              <p><%= link_to image_tag(photo.small_thumb.url, class: "img-responsive img-thumbnail"), flavor %></p>
+	     <% end %>
+          </div>
+      <% end %>
+ </div>
+<br>
+<%= link_to 'home', root_path %>

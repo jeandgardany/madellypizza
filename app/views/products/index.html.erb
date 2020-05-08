@@ -14,10 +14,11 @@
     </tr>
   </thead>
   <tbody>
-    <% @products.where(status: "active").each do |product| %>
+    <% @products.where(status: "ativo").each do |product| %>
       <tr>
         <td><%= link_to image_tag(product.image.large_thumb.url), product %></td>
         <td><%= product.name %></td>
+        <td><%= product.flavors.name %></td>
         <td><%= format_valor(product.price) %></td>
         <td><%= product.description %></td>
         <td><%= product.category.name %></td>
