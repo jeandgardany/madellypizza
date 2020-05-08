@@ -6,6 +6,12 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
   end
+  
+  def promotions
+    @products = Product.all.order(id: :desc)
+    #@q = Product.ransack(params[:q].try(:merge, m: params[:combinator]))
+    #@products = @q.result(distinct: true).page(params[:page]).per(16).order(id: :desc)
+  end
 
   # GET /products/1
   # GET /products/1.json
@@ -71,6 +77,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:code, :name, :price, :description, :status, :category_id, :image, photos:[])
+      params.require(:product).permit(:code, :name, :price, :description, :status, :category_id, :image, :promotion, :pricePRO, photos:[], flavors:[], fillings:[])
     end
 end

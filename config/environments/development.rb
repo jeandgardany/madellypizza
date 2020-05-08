@@ -62,6 +62,7 @@ Rails.application.configure do
 
   # Whitelist one hostname
   config.hosts << "www.madellypizza.com.br"
+  config.hosts << "madellypizza.com.br"
   # Whitelist a test domain
   config.hosts << /application\.local\Z/
   # Devise

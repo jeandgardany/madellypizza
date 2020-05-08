@@ -6,7 +6,9 @@ ruby '2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+#gem 'sqlite3', '~> 1.4'
+# DB Mysql
+gem 'mysql2', '>= 0.4.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -32,6 +34,13 @@ gem 'jquery-rails'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 gem 'devise'
+gem 'cancancan'
+# Paginação
+gem 'kaminari'
+# Gerenciar Bando de Dados
+gem 'rails_db', '2.3.1'
+# Pesquisas
+gem 'ransack', github: 'activerecord-hackery/ransack'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

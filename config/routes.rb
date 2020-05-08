@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :photo_uploads, only: [:new, :create, :destroy]
   end
+   get '/product/promotions' => 'products#promotions'
   resources :categories
   root to: 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

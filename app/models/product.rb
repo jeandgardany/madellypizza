@@ -4,8 +4,8 @@ class Product < ApplicationRecord
   mount_uploaders :photos, PhotosUploader
   mount_uploader :image, ImageUploader
   #has_many_attached :photos
-  has_many :fillings
-  has_many :flavors
+  #has_many :fillings
+  #has_many :flavors
   
   attr_accessor :remove_photos
   after_save do
