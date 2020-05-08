@@ -1,0 +1,7 @@
+<h1>Fotos do produto <%= @product.name %></h1>
+ 
+<%= form_with model: @product, url: product_photo_uploads_path(@product),
+              method: :post, local: true do |f| %>
+  <%= f.file_field :files, multiple: true %><br /><br />
+  <%= f.submit 'Upload' %>
+<% end %>
