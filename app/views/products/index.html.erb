@@ -23,11 +23,11 @@
         <td><%= product.category.name %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
-                      product_path(product), :class => 'btn btn-default btn-sm' %>
+                      product_path(product), :class => 'btn btn-dark btn-sm' %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "home", root_path, :class => 'btn btn-default btn-sm' %>
+<%= link_to "home", root_path, :class => 'btn btn-dark btn-sm' %>
