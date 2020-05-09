@@ -1,14 +1,14 @@
+<p id="notice"><%= notice %></p>
 <%- model_class = Product -%>
-<div class="container">
-  <p class="text-center" style="font-size: large"><b>Promoção da Semana</b></p>
+  <p class="text-center" style="font-size: large"><b>Promoção do Dia</b></p>
    <div class="row">
       <% @products.where(promotion: true, status: "ativo").each do |product| %>
-            <div class="col-md-2 col-sm-2 col-xs-4">
+         <div class="col-md-3 col-sm-3 col-xs-6">
             <p class="text-center" style="font-size: small"><b><%= product.name %>
             <p><%= link_to image_tag(product.image.small_thumb.url, class: "img-responsive img-thumbnail"), product %></p>
             <p class="text-center"><b><%= format_valor(product.pricePRO) %></b></p>
-            </div>       
+         </div>       
       <% end %>
    </div>
-</div>
+<br>
 <%= link_to 'home', root_path, :class => 'btn btn-dark btn-sm' %></dd>
