@@ -30,7 +30,6 @@
   <%= link_to 'Voltar', products_path, :class => 'btn btn-dark btn-sm' %></dd>
 </dl>
 <br>
-
   <% else %>
   <dt><strong><%= "Categoria" %>:</strong></dt>
   <dd><%= @product.category.name %></dd>
@@ -42,10 +41,10 @@
   </dd></p>
   <dd><%= link_to "Home", root_path, :class => 'btn btn-dark btn-sm' %>
   <%= link_to 'Voltar', products_path, :class => 'btn btn-dark btn-sm' %></dd>
-</dl>
+ </dl>
 <br>
   <% end %>
-
+<br>
 <!--%= image_tag(@product.photo_url.to_s) %-->
 <!--%= image_tag(@product.photo_url(:thumb).to_s) %-->
 <!--%= image_tag(@product.photo_url(:small_thumb).to_s) %-->
