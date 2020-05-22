@@ -61,11 +61,12 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Whitelist one hostname
-  #config.hosts << "www.madellypizza.com.br"
-  #config.hosts << "madellypizza.com.br"
-  config.hosts << "jean.lima.nom.br"
+  config.hosts << "www.madellypizza.com.br"
+  config.hosts << "madellypizza.com.br"
+  config.hosts.clear
+
   # Whitelist a test domain
-  config.hosts << /application\.local\Z/
+  #config.hosts << /application\.local\Z/
   # Devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 80 }
 end
